@@ -1,0 +1,36 @@
+<span class="heatmapTitle">{{getFilledCellCount()}} Contributions in the last year</span>
+<div class="heatmap">
+    <div class="month-labels">
+      <div class="month" *ngFor="let month of months">{{ month }}</div>
+    </div>
+    <div class="heatmap-body">        
+        <div class="heatmap-grid">
+          <div class="row">
+            <div class="cell" *ngFor="let day of days; let i = index" [ngStyle]="{'background-color': getColor(day.intensity)}"></div>
+          </div>
+        </div>
+    </div>   
+    <div class="bottom-row">
+        <div class="subtitle">Learn how we count contributions</div>
+        <div class="color-legend">
+          <div class="legend-item">
+            <div>Less</div>
+            <div class="legend-color" style="background-color: #12161a;margin-left:5px;"></div>
+          </div>
+          <div class="legend-item">
+            <div class="legend-color" style="background-color: #10442c"></div>
+          </div>
+          <div class="legend-item">
+            <div class="legend-color" style="background-color: #016f35"></div>
+          </div>
+          <div class="legend-item">
+            <div class="legend-color" style="background-color: #23a830;"></div>
+          </div>
+          <div class="legend-item">
+            <div class="legend-color" style="background-color: #32d950;"></div>
+          </div>
+          <div>More</div>
+        </div>
+      </div>
+</div>
+  
